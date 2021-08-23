@@ -12,6 +12,7 @@ interface RecentPatientsProps {
 }
 
 const PatientsTable: React.FC<RecentPatientsProps> = ({recentPatients}) => {
+  console.log(recentPatients);
   return (
     <AppTableContainer>
       <Table className='table'>
@@ -19,7 +20,7 @@ const PatientsTable: React.FC<RecentPatientsProps> = ({recentPatients}) => {
           <TableHeading />
         </TableHead>
         <TableBody>
-          {recentPatients.map(data => (
+          {recentPatients.map((data) => (
             <TableItem data={data} key={data.id} />
           ))}
         </TableBody>
